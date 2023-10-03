@@ -1,0 +1,9 @@
+```{r}
+case <- read.table("case-study2-data.txt")
+```
+
+```{r}
+case2 <-
+  case %>%
+  rename("ID" = "V1", "costofclaims" = "V2" , "age" = "V3" ,"gender" = "V4" , "numprocedures" = "V5", "numperscrip" = "V6", "numervisits" = "V7", "numcomplications" = "V8" , "numdiseases" = "V9", "numdays" = "V10")
+```
