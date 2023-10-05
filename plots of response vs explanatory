@@ -1,0 +1,48 @@
+
+
+
+```{r}
+boxplot(case2$numervisits ~ case2$gender)
+```
+
+```{r}
+ggplot(data = case2, aes(x = age, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Age of the Patient", y = "Number of ER Visits", title = "Age of Patient vs # of ER Visits")
+```
+
+```{r}
+ggplot(data = case2, aes(x = numdiseases, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Number of Diseases", y = "Number of ER Visits", title = "# of Diseases vs # of ER Visits")
+```
+
+```{r}
+ggplot(data = case2, aes(x = numprocedures, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Number of Procedures", y = "Number of ER Visits", title = "# of Procedures vs # of ER Visits")
+```
+
+```{r}
+ggplot(data = case2, aes(x = numperscrip, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Number of Prescriptions", y = "Number of ER Visits", title = "# of Prescriptions vs # of ER Visits")
+```
+
+```{r}
+ggplot(data = case2, aes(x = numcomplications, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Number of Complications", y = "Number of ER Visits", title = "# of Complications vs # of ER Visits")
+```
+
+```{r}
+ggplot(data = case2, aes(x = numdays, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Number of Days in the Hospital", y = "Number of ER Visits", title = "# of Days in Hospital vs # of ER Visits")
+```
+
+```{r}
+ggplot(data = case2, aes(x = costofclaims, y = numervisits)) + geom_point() +
+  geom_smooth() +
+  labs(x = "Cost of Insurance Claims", y = "Number of ER Visits", title = "Cost of Insurance Claims vs # of ER Visits")
+```
