@@ -1,0 +1,17 @@
+```{r}
+summary(case2$numervisits)
+mean(case2$numervisits)
+sd(case2$numervisits)
+```
+
+```{r}
+hist(case2$numervisits)
+ggplot(data = case2, aes(x = numervisits)) +
+  geom_histogram()
+ggplot(data = case2, aes(x = numervisits)) +
+  geom_boxplot()
+```
+
+```{r}
+qqnorm(case2$numervisits)
+```
