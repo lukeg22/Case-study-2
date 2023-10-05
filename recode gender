@@ -1,0 +1,1 @@
+case2$gender <- recode_factor(case2$gender, "0" = "female", "1" = "male")
