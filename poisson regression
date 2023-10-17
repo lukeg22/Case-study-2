@@ -1,0 +1,7 @@
+full.model <- glm(numervisits ~., data = case2, family = "poisson")
+backmodelAIC <- step(full.model, direction="backward")
+summary(backmodelAIC)
+basemodel <- glm(numervisits ~ 1, data = case2, family = "poisson")
+formodelAIC <- step(basemodel,scope=list(upper=full.model,lower=~1),direction="forward")
+summary(formodelAIC)
+plot(backmodelAIC)
