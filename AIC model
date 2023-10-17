@@ -1,0 +1,16 @@
+
+```{r}
+full.model <- lm(numervisits ~., data = case2)
+backmodelAIC <- step(full.model, direction="backward")
+summary(backmodelAIC)
+```
+```{r}
+basemodel <- lm(numervisits ~ 1, data = case2)
+```
+```{r}
+formodelAIC <- step(basemodel,scope=list(upper=full.model,lower=~1),direction="forward")
+summary(formodelAIC)
+```
+```{r}
+plot(backmodelAIC)
+```
